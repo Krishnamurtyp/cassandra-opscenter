@@ -5,7 +5,7 @@ MAINTAINER  Thomas Borg Salling <tbsalling@tbsalling.dk>
 RUN apt-get -y -o Dpkg::Options::='--force-confold' dist-upgrade; \
     apt-get update; \
     apt-get -y upgrade; \
-    apt-get -y install curl; \
+    apt-get -y install curl ssh; \
     echo "deb http://debian.datastax.com/community stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.community.list; \
     curl -L http://debian.datastax.com/debian/repo_key | sudo apt-key add - ; \
     apt-get update; \
