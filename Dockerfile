@@ -9,11 +9,11 @@ RUN apt-get update; \
     wget http://downloads.datastax.com/community/opscenter-5.0.2.tar.gz; \
     tar zxf opscenter-5.0.2.tar.gz; \
     rm opscenter-5.0.2.tar.gz; \
-    apt-get clean; \ 
+    apt-get clean; \
     echo "sleep infinity" >> /opt/opscenter-5.0.2/bin/opscenter
 
 # Expose OpsCenter
-EXPOSE 8888
+EXPOSE 8888 50031 61620
 
 # Launch OpsCenter
 ENTRYPOINT ["/opt/opscenter-5.0.2/bin/opscenter"]
